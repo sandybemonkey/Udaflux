@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">UdaFlux</string>
+
+    <string name="most_popular_url">https://api.themoviedb.org/3/movie/popular</string>
+    <string name="top_rated_url">https://api.themoviedb.org/3/movie/top_rated</string>
+    <string name="poster_prefix_url">http://image.tmdb.org/t/p/w500</string>
+
+    <string name="user_rating_sufix">/10</string>
+    <string name="error_message">Failed to get informations.</string>
+    <string name="details_title">Movie Details</string>
+
+    <string name="action_top_rated">Top Rated</string>
+    <string name="action_most_popular">Most Popular</string>
+    <string name="action_favorites">Favorites</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorites_error_message">Favorites list Empty.</string>
+    <string name="favorites_app_bar_title">UdaFlux - Favorites</string>
+    <string name="poular_title">UdaFlux - Popular</string>
+    <string name="top_rated_title">UdaFlux - Top Rated</string>
+
+
+</resources>

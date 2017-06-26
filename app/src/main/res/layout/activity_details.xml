@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_height="wrap_content" android:layout_width="match_parent">
+    <android.support.constraint.ConstraintLayout
+
+         tools:context="bemonkey.net.udaflux.ui.DetailsActivity"
+         android:id="@+id/activity_details"
+         android:layout_width="wrap_content"
+         android:isScrollContainer="true"
+         android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:id="@+id/tv_title"
+                android:translationZ="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:paddingStart="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="0dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                />
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_release_date"
+                android:drawableLeft="@drawable/ic_today_black_24dp"
+                android:drawablePadding="10dp"
+                android:textSize="16sp"
+                android:gravity="center|fill"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:background="@color/accent"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:layout_marginTop="0dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                tools:layout_editor_absoluteX="3dp"/>
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:id="@+id/tv_user_rating"
+                android:drawableLeft="@drawable/ic_stars_black_24dp"
+                android:drawablePadding="10dp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_release_date"
+                android:layout_marginLeft="-21dp"
+                android:textStyle="bold"
+                android:gravity="center|fill"
+                android:background="@color/accent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_marginTop="0dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:textSize="14sp"
+                android:id="@+id/tv_plot_synopsis"
+                android:orientation="vertical"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textStyle="italic"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_rating"
+                android:lineSpacingExtra="2sp"
+                android:paddingStart="10dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintHorizontal_bias="1.0"/>
+
+        <android.support.constraint.Guideline
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/guideline"
+                    app:layout_constraintGuide_begin="0dp"
+                    android:orientation="vertical"
+                    android:isScrollContainer="false"/>
+
+        <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                android:id="@+id/floatingActionButton"
+                android:onClick="floatingButtonActions"
+                app:layout_constraintTop_toTopOf="@+id/tv_title"
+                android:layout_marginTop="476dp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_user_rating"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_number_of_reviews"
+                android:drawableLeft="@drawable/ic_rate_review_black_24dp"
+                android:drawablePadding="10dp"
+                android:textStyle="bold"
+                android:gravity="center|fill"
+                android:background="@color/primary_dark"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textSize="16sp"
+                android:onClick="seeReviews"
+                android:layout_marginTop="0dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                android:textColor="@android:color/white"
+                app:layout_constraintLeft_toRightOf="@+id/tv_user_rating"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:text="..."/>
+
+        <Button
+                android:text="Trailers"
+                android:layout_width="98dp"
+                android:layout_height="42dp"
+                android:id="@+id/bt_trailer"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_plot_synopsis"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintVertical_bias="1.0"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textColorLink="@color/primary_dark"
+                android:background="@color/primary_dark"
+                android:onClick="seeTrailers"/>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

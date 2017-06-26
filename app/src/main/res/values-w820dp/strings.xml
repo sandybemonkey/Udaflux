@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="favorites_error_message">Favorites list Empty.</string>
+    <string name="favorites_app_bar_title">UdaFlux - Favorites</string>
+</resources>
